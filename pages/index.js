@@ -1,15 +1,21 @@
 import Head from 'next/head'
+import Link from 'next/link'
 
 export default function Home() {
+  let title = 'Create Next App title mod';
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
         <h1 className="title">
+          Read{' '}
+          <Link href='/posts/first'>
+            <a> first post</a>
+          </Link>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
